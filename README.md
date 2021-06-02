@@ -30,5 +30,11 @@ Step five: To add dummy data in database user have to run “php artisan db:seed
 1. Once the user selects the emails and clicks on subscribe button it will generate and send the confirmation email to the user.
 1. The user received the link of the subscription tab in the email, where the user can unsubscribe the unwanted email if the user wants.
 
+**End points:** 
+
+1. Subscription/list - this end point is used to show the list of unsubscribed list.
+1. User-subscription/create – this end point is used to add the subscriptions.
+1. User-subscription/remove – this end point is used to unsubscribe.
+1. User-subscription/list – this end point is used to show the subscriptions list.
 
 
