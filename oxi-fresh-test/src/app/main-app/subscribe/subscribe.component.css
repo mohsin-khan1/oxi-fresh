@@ -1,0 +1,13 @@
+.subscribe-btn:hover{
+background-color: white;
+color: red;
+border: 1px solid red;
+border-radius: 5px;
+}
+@media screen and (max-width:600px){
+
+    .child-routes{
+        padding: 10px!important;
+    }
+
+}

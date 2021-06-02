@@ -1,0 +1,35 @@
+<div class="background">
+    <div class="d-flex justify-content-center algin-items-center">
+        <div class="col-lg-6 custom-login">
+            <h1>Registration</h1>
+            <form [formGroup]="registrationForm" (ngSubmit)="onRegistation()" class="mt-5">
+                <span class="text-danger w-100 text-lg-left mt-2"
+                *ngIf="(registrationFormControls.name.touched || FormSubmitted) && registrationFormControls.name.errors?.required">
+                    Please Enter User name*
+                </span>
+                <input type="text" placeholder="Type username" class="form-control form-control-lg" formControlName="name">
+                <span class="text-danger w-100 text-lg-left mt-2"
+                *ngIf="(registrationFormControls.email.touched || FormSubmitted) && registrationFormControls.email.errors?.required">
+                    Please Enter Email*
+                </span>
+                <input type="email" placeholder="Type Email" class="form-control form-control-lg mt-4" formControlName="email">
+                
+                <span class="text-danger w-100 text-lg-left mt-2"
+                *ngIf="(registrationFormControls.password.touched || FormSubmitted) && registrationFormControls.password.errors?.required">
+                    Please Enter Password*
+                </span>
+                <input type="password" placeholder="Type password" class="form-control form-control-lg mt-4" formControlName="password">
+                <span class="text-danger w-100 text-lg-left mt-2"
+                *ngIf="(registrationFormControls.password_confirmation.touched || FormSubmitted)">
+                    Password not matched
+                </span>
+                <input type="password" placeholder="Confirm password" class="form-control form-control-lg mt-4" formControlName="password_confirmation">
+                <button class="btn btn-lg custom-btn w-100 mt-4">Register</button>
+                <div class="float-right register pt-3">
+                    <span>If you are already a user</span>&nbsp;<a href="#" routerLink="/login"> Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+   

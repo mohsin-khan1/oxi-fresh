@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/*  Bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
+
+h1,h2,h3,h4,h5,h6,.nav-link,th{
+    font-family:'Noto Sans TC', sans-serif!important;
+}
+a,td,span{
+    font-family: 'Poppins', sans-serif;
+}

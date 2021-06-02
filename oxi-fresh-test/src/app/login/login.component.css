@@ -1,0 +1,54 @@
+.background{
+    margin: 80px;
+}
+.custom-login{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 100px;
+}
+span{
+    float: left;
+}
+.custom-login img{
+    width: 300px;
+}
+.form-control-lg {
+    height: calc(2em + 1rem + 2px);
+    border-radius: 0!important;
+}
+.form-control {
+    color: black;
+    border: 2px solid black;
+    border-radius: 0!important;
+}
+.forget-password a{
+    color: black;
+    text-decoration: underline;
+}
+.custom-btn {
+    background-color: #1976d2;
+    color: white;
+}
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+    box-shadow: 0 0 13px inset rgba(255,0,0,0.2);
+}
+
+
+input.ng-touched.ng-valid{
+    border: 2px solid green;
+}
+
+@media screen and (max-width:600px){
+    .background{
+        margin: 20px;
+    }
+    .custom-login{
+        padding: 40px!important;        
+    }
+    .actions{
+        text-align: center!important;
+    }
+}
+
+

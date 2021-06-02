@@ -1,0 +1,24 @@
+<div class="background">
+    <div class="d-flex justify-content-center algin-items-center">
+        <div class="col-lg-6 custom-login text-center">
+            <h1>Login</h1>
+            <form [formGroup] = "loginForm" (ngSubmit) ="onLogin()" class="mt-5">
+                <span class="text-danger w-100 text-lg-left"
+                *ngIf="(loginFormControls.email.touched || FormSubmitted) && loginFormControls.email.errors?.required">
+                    Please Enter User Name*
+            </span>
+                <input type="email"  placeholder="Type email" class="form-control form-control-lg" formControlName="email">
+            <span class="text-danger w-100 text-lg-left"
+                *ngIf="(loginFormControls.password.touched || FormSubmitted) && loginFormControls.password.errors?.required">
+                    Please Enter Password*
+            </span>
+                <input type="password" placeholder="Type password" class="form-control form-control-lg mt-4" formControlName="password">
+              
+                <button class="btn btn-lg custom-btn w-100 mt-4"  >Login</button>
+                <div class="float-right register pt-3 ">
+                    <span>Register if you are not a user</span>&nbsp;<a href="#" routerLink="/register">Register</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>

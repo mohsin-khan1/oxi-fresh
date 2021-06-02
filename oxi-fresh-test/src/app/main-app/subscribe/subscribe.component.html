@@ -1,0 +1,38 @@
+
+<div class="container subscribe">
+    <div class="d-flex justify-content-center align-items-center list-table">
+        <div class="col-lg-12 text-center">
+            <h1>Please subscribe for latest updates</h1>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+            <table class="table table-bordered table-responsive d-lg-table d-md-table mt-5">
+                <thead>
+                    <tr>
+                        <th>Sr#</th>
+                        <th>Company Emails</th>
+                        <th>Category</th>
+                        <th>Check/Uncheck</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr formArrayName="subscribeList" *ngFor="let subscription of subscribeListFormArray.controls; let i = index" >
+                        <ng-container formGroupName="{{i}}">                            
+                            <!-- Hidden Form Controls-->
+                            <input type="hidden" formControlName="id">
+                            <input type="hidden" formControlName="compnay_email">
+                            <input type="hidden" formControlName="description">
+                            
+                            <td>{{i+1}}</td>
+                            <td>{{subscribeListFormArray.controls[i].get('compnay_email')?.value}}</td>
+                            <td>{{subscribeListFormArray.controls[i].get('description')?.value}}</td>
+                            
+                            <td><input type="checkbox" formControlName="isSubscribe"></td>
+                        </ng-container>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            <button class="btn btn-danger subscribe-btn float-right" >Subscribe</button>
+        </form>
+        </div>
+    </div>
+</div>
